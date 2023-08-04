@@ -25,4 +25,8 @@ public class ListViewModel extends AndroidViewModel {
     public LiveData<List<Item>> getAllItems(){
         return allItems;
     }
+
+    public void insert(Item item) {
+        listRepository.insert(item);
+    }
 }

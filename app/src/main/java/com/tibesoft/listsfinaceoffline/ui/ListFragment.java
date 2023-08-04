@@ -28,11 +28,17 @@ public class ListFragment extends Fragment {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
         ListAdapter listAdapter = new ListAdapter();
 
-        binding.recyclerView.setAdapter(listAdapter);
-
         listViewModel = new ViewModelProvider(requireActivity()).get(ListViewModel.class);
         listViewModel.getAllItems().observe(requireActivity(), items -> {
-            listAdapter.setItems(items);
+            if (items != null) {
+                listAdapter.setItems(items);
+            }
+        });
+
+        binding.recyclerView.setAdapter(listAdapter);
+
+        binding.buttonAdd.setOnClickListener(v -> {
+            new DialogAddListFragment().show(getChildFragmentManager(), "dialog_add_list");
         });
 
         return binding.getRoot();
