@@ -8,14 +8,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.tibesoft.listsfinaceoffline.adapter.ListAdapter;
 import com.tibesoft.listsfinaceoffline.databinding.FragmentListBinding;
+import com.tibesoft.listsfinaceoffline.viewmodel.ListViewModel;
 
 public class ListFragment extends Fragment {
 
     private FragmentListBinding binding;
+    private ListViewModel listViewModel;
 
     @Nullable
     @Override
@@ -23,6 +26,14 @@ public class ListFragment extends Fragment {
         binding = FragmentListBinding.inflate(inflater, container, false);
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
+        ListAdapter listAdapter = new ListAdapter();
+
+        binding.recyclerView.setAdapter(listAdapter);
+
+        listViewModel = new ViewModelProvider(requireActivity()).get(ListViewModel.class);
+        listViewModel.getAllItems().observe(requireActivity(), items -> {
+            listAdapter.setItems(items);
+        });
 
         return binding.getRoot();
     }

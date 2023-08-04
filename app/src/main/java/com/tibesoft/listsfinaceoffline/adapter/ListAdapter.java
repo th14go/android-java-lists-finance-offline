@@ -15,8 +15,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     private List<Item> items;
 
-    public ListAdapter(List<Item> items) {
-        this.items = items;
+    public ListAdapter() {
     }
 
     @NonNull
@@ -36,6 +35,10 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    public void setItems(List<Item> items){
+        this.items = items;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
