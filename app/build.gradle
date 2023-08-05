@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.tibesoft.listsfinaceoffline'
+    namespace 'com.tibesoft.listsfinanceoffline'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.tibesoft.listsfinaceoffline"
+        applicationId "com.tibesoft.listsfinanceoffline"
         minSdk 24
         targetSdk 33
         versionCode 1

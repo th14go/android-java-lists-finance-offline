@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.viewmodel;
+package com.tibesoft.listsfinanceoffline.viewmodel;
 
 import android.app.Application;
 
@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.tibesoft.listsfinaceoffline.data.model.Item;
-import com.tibesoft.listsfinaceoffline.repository.ListRepository;
+import com.tibesoft.listsfinanceoffline.data.model.Item;
+import com.tibesoft.listsfinanceoffline.repository.ListRepository;
 
 import java.util.List;
 

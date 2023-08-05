@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.ui;
+package com.tibesoft.listsfinanceoffline.ui;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import com.tibesoft.listsfinaceoffline.adapter.ListAdapter;
-import com.tibesoft.listsfinaceoffline.databinding.FragmentListBinding;
-import com.tibesoft.listsfinaceoffline.viewmodel.ListViewModel;
+import com.tibesoft.listsfinanceoffline.adapter.ListAdapter;
+import com.tibesoft.listsfinanceoffline.databinding.FragmentListBinding;
+import com.tibesoft.listsfinanceoffline.viewmodel.ListViewModel;
 
 public class ListFragment extends Fragment {
 
@@ -32,10 +32,9 @@ public class ListFragment extends Fragment {
         listViewModel.getAllItems().observe(requireActivity(), items -> {
             if (items != null) {
                 listAdapter.setItems(items);
+                binding.recyclerView.setAdapter(listAdapter);
             }
         });
-
-        binding.recyclerView.setAdapter(listAdapter);
 
         binding.buttonAdd.setOnClickListener(v -> {
             new DialogAddListFragment().show(getChildFragmentManager(), "dialog_add_list");

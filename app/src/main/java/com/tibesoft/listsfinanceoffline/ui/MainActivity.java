@@ -1,11 +1,11 @@
-package com.tibesoft.listsfinaceoffline.ui;
+package com.tibesoft.listsfinanceoffline.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.tibesoft.listsfinaceoffline.R;
-import com.tibesoft.listsfinaceoffline.databinding.ActivityMainBinding;
+import com.tibesoft.listsfinanceoffline.R;
+import com.tibesoft.listsfinanceoffline.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 

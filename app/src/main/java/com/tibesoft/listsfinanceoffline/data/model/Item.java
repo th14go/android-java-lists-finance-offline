@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.data.model;
+package com.tibesoft.listsfinanceoffline.data.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

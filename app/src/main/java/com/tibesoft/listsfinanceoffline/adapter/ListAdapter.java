@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.adapter;
+package com.tibesoft.listsfinanceoffline.adapter;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -6,8 +6,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.tibesoft.listsfinaceoffline.data.model.Item;
-import com.tibesoft.listsfinaceoffline.databinding.ItemListBinding;
+import com.tibesoft.listsfinanceoffline.data.model.Item;
+import com.tibesoft.listsfinanceoffline.databinding.ItemListBinding;
 
 import java.util.List;
 

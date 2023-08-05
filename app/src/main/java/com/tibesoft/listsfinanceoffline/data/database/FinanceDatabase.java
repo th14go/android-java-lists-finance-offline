@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.data.database;
+package com.tibesoft.listsfinanceoffline.data.database;
 
 import android.content.Context;
 
@@ -6,8 +6,8 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.tibesoft.listsfinaceoffline.data.dao.ListDao;
-import com.tibesoft.listsfinaceoffline.data.model.Item;
+import com.tibesoft.listsfinanceoffline.data.dao.ListDao;
+import com.tibesoft.listsfinanceoffline.data.model.Item;
 
 @Database(entities = {Item.class}, version = 1, exportSchema = false)
 public abstract class FinanceDatabase extends RoomDatabase {

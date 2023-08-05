@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.util;
+package com.tibesoft.listsfinanceoffline.util;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

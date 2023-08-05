@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline;
+package com.tibesoft.listsfinanceoffline;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.tibesoft.listsfinaceoffline.ui;
+package com.tibesoft.listsfinanceoffline.ui;
 
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -13,9 +13,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.tibesoft.listsfinaceoffline.data.model.Item;
-import com.tibesoft.listsfinaceoffline.databinding.FragmentDialogAddListBinding;
-import com.tibesoft.listsfinaceoffline.viewmodel.ListViewModel;
+import com.tibesoft.listsfinanceoffline.data.model.Item;
+import com.tibesoft.listsfinanceoffline.databinding.FragmentDialogAddListBinding;
+import com.tibesoft.listsfinanceoffline.viewmodel.ListViewModel;
 
 public class DialogAddListFragment extends DialogFragment {
 

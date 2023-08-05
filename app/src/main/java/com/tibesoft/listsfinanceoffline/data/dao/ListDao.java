@@ -1,11 +1,11 @@
-package com.tibesoft.listsfinaceoffline.data.dao;
+package com.tibesoft.listsfinanceoffline.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.tibesoft.listsfinaceoffline.data.model.Item;
+import com.tibesoft.listsfinanceoffline.data.model.Item;
 
 import java.util.List;
 

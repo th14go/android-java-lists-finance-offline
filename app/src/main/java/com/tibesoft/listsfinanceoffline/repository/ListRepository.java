@@ -1,13 +1,13 @@
-package com.tibesoft.listsfinaceoffline.repository;
+package com.tibesoft.listsfinanceoffline.repository;
 
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import com.tibesoft.listsfinaceoffline.data.dao.ListDao;
-import com.tibesoft.listsfinaceoffline.data.database.FinanceDatabase;
-import com.tibesoft.listsfinaceoffline.data.model.Item;
-import com.tibesoft.listsfinaceoffline.util.AppExecutors;
+import com.tibesoft.listsfinanceoffline.data.dao.ListDao;
+import com.tibesoft.listsfinanceoffline.data.database.FinanceDatabase;
+import com.tibesoft.listsfinanceoffline.data.model.Item;
+import com.tibesoft.listsfinanceoffline.util.AppExecutors;
 
 import java.util.List;
 
