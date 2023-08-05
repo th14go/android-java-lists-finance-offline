@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import com.tibesoft.listsfinanceoffline.R;
 import com.tibesoft.listsfinanceoffline.adapter.ListAdapter;
 import com.tibesoft.listsfinanceoffline.databinding.FragmentListBinding;
 import com.tibesoft.listsfinanceoffline.viewmodel.ListViewModel;
@@ -19,6 +20,7 @@ public class ListFragment extends Fragment {
 
     private FragmentListBinding binding;
     private ListViewModel listViewModel;
+    private ListAdapter listAdapter;
 
     @Nullable
     @Override
@@ -26,7 +28,7 @@ public class ListFragment extends Fragment {
         binding = FragmentListBinding.inflate(inflater, container, false);
 
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(requireActivity()));
-        ListAdapter listAdapter = new ListAdapter();
+        listAdapter = new ListAdapter();
 
         listViewModel = new ViewModelProvider(requireActivity()).get(ListViewModel.class);
         listViewModel.getAllItems().observe(requireActivity(), items -> {
@@ -36,10 +38,27 @@ public class ListFragment extends Fragment {
             }
         });
 
+        clicks();
+
+        return binding.getRoot();
+    }
+
+    private void clicks() {
         binding.buttonAdd.setOnClickListener(v -> {
             new DialogAddListFragment().show(getChildFragmentManager(), "dialog_add_list");
         });
 
-        return binding.getRoot();
+        listAdapter.setItemClickListener(id -> {
+            Bundle bundle = new Bundle();
+            bundle.putInt("id", id);
+            loadFragment(new SublistFragment(), "sublist", bundle);
+        });
+    }
+
+    private void loadFragment(Fragment fragment, String tag, Bundle bundle){
+        fragment.setArguments(bundle);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(
+                R.id.frameLayout, fragment, tag
+        ).addToBackStack(tag).commit();
     }
 }
