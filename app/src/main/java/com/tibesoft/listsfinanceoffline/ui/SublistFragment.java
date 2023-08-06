@@ -23,9 +23,10 @@ public class SublistFragment extends Fragment {
         binding = FragmentSublistBinding.inflate(inflater, container, false);
 
         Bundle b = getArguments();
+        int id = 0;
         if(b != null){
-            int id = b.getInt("id");
-            if(id > 0){
+            id = b.getInt("id");
+            if(id > -1){
                 Toast.makeText(requireActivity(), String.valueOf(id), Toast.LENGTH_SHORT).show();
             }
         }
